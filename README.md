@@ -9,7 +9,9 @@
 [standard-image]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
 [standard-url]: https://standardjs.com
 
-#### Simple, robust, BitTorrent tracker (client & server) implementation
+#### Simple, robust, ZeroNet-style BitTorrent tracker (client & server) implementation
+
+### Adding support for trackers on the ZeroNet Protocol and onion addresses
 
 ![tracker](https://raw.githubusercontent.com/webtorrent/bittorrent-tracker/master/img.png)
 

@@ -20,12 +20,14 @@ var argv = minimist(process.argv.slice(2), {
     'udp',
     'version',
     'ws',
-    'stats'
+    'stats',
+    'zero'
   ],
   string: [
     'http-hostname',
     'udp-hostname',
-    'udp6-hostname'
+    'udp6-hostname',
+    'zero-hostname'
   ],
   default: {
     port: 8000,

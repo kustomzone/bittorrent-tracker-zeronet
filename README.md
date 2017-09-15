@@ -22,7 +22,7 @@ clients. The requests include metrics from clients that help the tracker keep ov
 statistics about the torrent. The response includes a peer list that helps the client
 participate in the torrent swarm.
 
-This module is used by [WebTorrent](http://webtorrent.io).
+This module is used by [ZeroNetJS](https://zeronetjs.github.io).
 
 ## features
 
@@ -35,7 +35,6 @@ This module is used by [WebTorrent](http://webtorrent.io).
 - Supports tracker "scrape" extension
 - Robust and well-tested
   - Comprehensive test suite (runs entirely offline, so it's reliable)
-  - Used by popular clients: [WebTorrent](http://webtorrent.io), [peerflix](https://www.npmjs.com/package/peerflix), and [playback](https://mafintosh.github.io/playback/)
 - Tracker statistics available via web interface at `/stats` or JSON data at `/stats.json`
 
 Also see [bittorrent-dht](https://www.npmjs.com/package/bittorrent-dht).
@@ -43,7 +42,7 @@ Also see [bittorrent-dht](https://www.npmjs.com/package/bittorrent-dht).
 ## install
 
 ```
-npm install bittorrent-tracker
+npm install bittorrent-tracker-zeronet
 ```
 
 ## usage
@@ -53,12 +52,13 @@ npm install bittorrent-tracker
 To connect to a tracker, just do this:
 
 ```js
-var Client = require('bittorrent-tracker')
+var Client = require('bittorrent-tracker-zeronet')
 
 var requiredOpts = {
   infoHash: new Buffer('012345678901234567890'), // hex string or Buffer
   peerId: new Buffer('01234567890123456789'), // hex string or Buffer
   announce: [], // list of tracker server urls
+  // zswarm: swarm optional zeronet swarm (will be created if empty)
   port: 6881 // torrent client port, (in browser, optional)
 }
 
@@ -280,4 +280,4 @@ $ bittorrent-tracker --help
 
 ## license
 
-MIT. Copyright (c) [Feross Aboukhadijeh](https://feross.org) and [WebTorrent, LLC](https://webtorrent.io).
+MIT. Copyright (c) [Feross Aboukhadijeh](https://feross.org), [WebTorrent, LLC](https://webtorrent.io) and [Maciej Krüger](https://mkg20001.github.io).
